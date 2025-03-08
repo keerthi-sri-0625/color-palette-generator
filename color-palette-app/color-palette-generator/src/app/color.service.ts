@@ -16,8 +16,6 @@ export class ColorService {
     }
     return color;
   }
-
-  // Function to generate a palette of random colors
   generateColorPalette(num: number): string[] {
     const palette: string[] = [];
     for (let i = 0; i < num; i++) {
