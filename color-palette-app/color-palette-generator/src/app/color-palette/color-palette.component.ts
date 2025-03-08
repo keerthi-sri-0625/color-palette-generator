@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ColorService } from '../color.service';  // Import ColorService
-
+import { ColorService } from '../color.service';
+import { CommonModule} from '@angular/common';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-color-palette',
+  standalone: true,
+  imports: [CommonModule,FormsModule],
   templateUrl: './color-palette.component.html',
-  styleUrls: ['./color-palette.component.css']
+  styleUrl: './color-palette.component.css'
 })
+
 export class ColorPaletteComponent implements OnInit {
   palette: string[] = [];  // Array to hold generated colors
   numberOfColors: number = 5;  // Default number of colors in the palette
@@ -27,4 +31,3 @@ export class ColorPaletteComponent implements OnInit {
     this.generatePalette();
   }
 }
-
